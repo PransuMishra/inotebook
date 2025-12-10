@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/inotebook/static/css/main.c9bf60af.css",
+    "main.js": "/inotebook/static/js/main.8299c8e2.js",
+    "static/js/453.fd58b2a9.chunk.js": "/inotebook/static/js/453.fd58b2a9.chunk.js",
+    "index.html": "/inotebook/index.html",
+    "main.c9bf60af.css.map": "/inotebook/static/css/main.c9bf60af.css.map",
+    "main.8299c8e2.js.map": "/inotebook/static/js/main.8299c8e2.js.map",
+    "453.fd58b2a9.chunk.js.map": "/inotebook/static/js/453.fd58b2a9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9bf60af.css",
+    "static/js/main.8299c8e2.js"
+  ]
+}
