@@ -1,0 +1,142 @@
+/* Full home background */
+.home-page {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 40px 15px;
+  background: linear-gradient(
+    -45deg,
+    #020617,
+    #0f172a,
+    #1e3a8a,
+    #4f46e5,
+    #7c3aed
+  );
+  background-size: 400% 400%;
+  animation: homeGradient 18s ease infinite;
+}
+
+/* Soft glowing overlay */
+.home-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.25), transparent 55%),
+              radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.25), transparent 55%);
+  pointer-events: none;
+}
+
+/* Main content area */
+.home-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Top heading section */
+.home-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #e5e7eb;
+  animation: fadeDown 0.8s ease-out;
+}
+
+.home-header h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.home-header h1 span {
+  background: linear-gradient(90deg, #60a5fa, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-header p {
+  font-size: 16px;
+  color: #c7d2fe;
+}
+
+/* Notes container glass look */
+.home-notes-card {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 18px;
+  padding: 25px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  animation: fadeUp 0.8s ease-out;
+}
+
+/* Background animation */
+@keyframes homeGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Entry animations */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .home-header h1 {
+    font-size: 26px;
+  }
+
+  .home-notes-card {
+    padding: 18px;
+  }
+}
+
+.home-notes-card label {
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+.home-notes-card button {
+  box-shadow: 0 0 15px rgba(99,102,241,0.7);
+}
+
+.home-notes-card h2 {
+  color: #93c5fd;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 6px;
+}
+
+.no-notes-text {
+  color: #e5e7eb;       
+  font-weight: 600;
+  opacity: 1;           
+  text-shadow: 0 0 6px rgba(0,0,0,0.6); 
+}

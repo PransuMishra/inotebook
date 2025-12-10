@@ -1,0 +1,114 @@
+.custom-navbar {
+  background: radial-gradient(circle at 0% 0%, #1d283a, #020617);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Brand */
+.brand-glow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.brand-icon {
+  font-size: 20px;
+  color: #facc15;
+}
+
+.brand-text {
+  font-size: 20px;
+  color: #e5e7eb;
+}
+
+.brand-text span {
+  background: linear-gradient(90deg, #60a5fa, #a855f7, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Links */
+.nav-links .nav-link {
+  color: #cbd5f5 !important;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+  margin: 0 6px;
+  transition: color 0.15s ease;
+  font-size: 15px;
+}
+
+.nav-links .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Underline animation */
+.nav-link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #60a5fa, #a855f7);
+  transition: width 0.2s ease;
+}
+
+.nav-link-underline:hover::after,
+.active-link.nav-link-underline::after {
+  width: 100%;
+}
+
+/* Active link color */
+.active-link {
+  color: #ffffff !important;
+}
+
+/* Auth buttons */
+.auth-buttons .auth-btn {
+  font-size: 14px;
+  border-radius: 999px;
+  padding: 6px 16px;
+}
+
+.auth-btn-filled {
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  border: none;
+}
+
+.auth-btn-filled:hover {
+  opacity: 0.95;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.6);
+}
+
+.logout-btn {
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 14px;
+}
+
+/* Toggler */
+.custom-toggler {
+  border-color: rgba(148, 163, 184, 0.6);
+}
+
+.custom-toggler .navbar-toggler-icon {
+  filter: drop-shadow(0 0 4px rgba(148, 163, 184, 0.9));
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .nav-links .nav-link {
+    padding-left: 0;
+  }
+
+  .auth-buttons {
+    margin-top: 8px;
+  }
+}

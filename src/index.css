@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+i{
+  cursor: pointer;
+}
+
+
+/* Dark only the background, not the modal */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.7) !important;  
+  pointer-events: none;                            
+}
+
+/* Keep modal fully bright */
+.modal-content {
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+  filter: none !important;
+  z-index: 2000 !important;
+}
+
+/* Ensure modal stays above everything */
+.modal {
+  z-index: 2000 !important;
+}
+
+
+
+
+
+.modal-backdrop.show {
+  opacity: 0.2 !important;   
+}
